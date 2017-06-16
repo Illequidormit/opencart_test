@@ -99,8 +99,8 @@
           $now = new DateTime();
 
           if (($product['isHide'] == 0) ||
-          (($product['isHide'] == 1) && (empty($product['date_modified']) && (datediff($date_added, $now)->format('%s') >= 1))) ||
-          (($product['isHide'] == 1) && (!empty($product['date_modified'])) && (datediff($date_modified, $now)->format('%s') >= 1))
+          (($product['isHide'] == 1) && (empty($product['date_modified']) && (datediff($date_added, $now)->format('%a') >= 1))) ||
+          (($product['isHide'] == 1) && (!empty($product['date_modified'])) && (datediff($date_modified, $now)->format('%a') >= 1))
           ) {
         ?>
         <div class="product-layout product-list col-xs-12">
